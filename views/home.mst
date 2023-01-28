@@ -1,3 +1,9 @@
 {{>header}}
 
-<h1>Seja bem vindo !!!</h1> 
+<h2>Projeto - 26/01</h2>
+
+<p> Desenvolvimento de um projeto na arquitetura MVC com 3 rotas distintas</p>
+<hr>
+
+<a href="http://localhost:3000/grade"> Matérias do 3° semestre </a><br/>
+<a href="http://localhost:3000/historico"> Grade escolar </a>

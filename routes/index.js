@@ -2,18 +2,22 @@ const express = require('express')
 
 const router = express.Router();
 
-
+router.get('/', (req, res)=>{
+    res.render('home');
+});
 router.get('/grade', (req, res) => {
     let obj ={
-        cursando:[
+        cabecalho:[
             {
-            id: "ESM100",
-            materia: "Estágio Supervisionado em Desenvolvimento de Software Multiplataforma",
-            semestre: 20231,
-            nota: "--",
-            aproveitamento: "--",
-            status: "Em Curso"
+                id : 'id',
+                materia: 'materia',
+                semestre:'semestre',
+                nota: 'nota',
+                aproveitamento: 'aproveitamento',
+                status:'status'
             },
+        ],
+        cursando:[
             {
             id: "IBD016",
             materia: "Banco de Dados - Não relacional",
@@ -80,14 +84,6 @@ router.get('/historico',(req, res) => {
     let obj = {
         grade:[
             {
-             id: "ESM100",
-             materia: "Estágio Supervisionado em Desenvolvimento de Software Multiplataforma",
-             semestre: 20231,
-             nota: "--",
-             aproveitamento: "--",
-             status: "Em Curso"
-            },
-            {
              id: "IAL010",
              materia: "Algoritmo e Lógica de Programação",
              semestre: 20221,
@@ -131,8 +127,8 @@ router.get('/historico',(req, res) => {
              id: "IES011",
              materia: "Engenharia de Software I",
              semestre: 20221,
-             "--": "6.1",
-             "--": "90.00%",
+             nota: "6.1",
+             aproveitamento: "90.00%",
              status: "Aprovado por Nota e Frequência"
             },
             {
